@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bitrix24": {
+      "command": "python3",
+      "args": ["/home/user/Hasan/server.py"],
+      "env": {
+        "BITRIX24_WEBHOOK_URL": "https://your-domain.bitrix24.ru/rest/1/<token>/"
+      }
+    }
+  }
+}
