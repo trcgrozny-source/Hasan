@@ -1,11 +1,14 @@
 """MCP server for Bitrix24 tasks via incoming webhook."""
 
 import os
+import pathlib
 import httpx
 from dotenv import load_dotenv
-from mcp.server.fastmcp import FastMCP
 
-load_dotenv()
+# Load .env from the directory where this file lives
+load_dotenv(pathlib.Path(__file__).parent / ".env")
+
+from mcp.server.fastmcp import FastMCP
 
 WEBHOOK_URL = os.environ.get("BITRIX24_WEBHOOK_URL", "").rstrip("/")
 
